@@ -1,0 +1,16 @@
+---
+name: Cargo Features
+description: Determine feature combinations from Cargo.toml
+inputs:
+    cargo-toml:
+        description: Path of `Cargo.toml` file
+        required: false
+        default: Cargo.toml
+outputs:
+    features:
+        description: A JSON array for features found in `Cargo.toml`.
+    feature-combinations:
+        description: A JSON array of all possible feature combinations in `Cargo.toml`.
+runs:
+    using: node20
+    main: index.js
